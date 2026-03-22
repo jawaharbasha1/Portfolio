@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gagan Chauhan — AI-Powered Full Stack Developer & Problem Solver</title>
+  <meta name="description" content="Portfolio of Gagan Chauhan — Computer Science student, full-stack developer, and data science enthusiast building intelligent systems and scalable web apps." />
+  <meta name="keywords" content="Gagan Chauhan, Portfolio, Full Stack Developer, Data Science, Machine Learning, Web Developer" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <!-- Scroll Progress Bar -->
+  <div class="scroll-progress" id="scrollProgress"></div>
+
+  <!-- Navigation -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#hero" class="nav-logo">&lt;GC /&gt;</a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#certifications" class="nav-link">Certifications</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <a href="Gagan CV (2).docx" download="Gagan_Chauhan_CV.docx" class="btn-resume" id="resumeBtn" title="Download Resume">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          Resume
+        </a>
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark/light mode">
+          <svg class="sun-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+          <svg class="moon-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        </button>
+        <button class="nav-hamburger" id="navHamburger" aria-label="Toggle navigation">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero" id="hero">
+    <div class="hero-glow" id="heroGlow"></div>
+    <div class="hero-particles" id="heroParticles"></div>
+    <div class="hero-content">
+      <div class="hero-text">
+        <p class="hero-greeting">Hello, I'm</p>
+        <h1 class="hero-name">Gagan Chauhan</h1>
+        <div class="hero-typing-wrapper">
+          <span class="hero-typing" id="heroTyping"></span>
+          <span class="typing-cursor">|</span>
+        </div>
+        <p class="hero-description">Computer Science student at LPU, passionate about building intelligent systems, crunching data, and creating impactful web solutions.</p>
+        <div class="hero-cta">
+          <a href="#projects" class="btn-primary" id="ctaViewWork">
+            View My Work
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </a>
+          <a href="#contact" class="btn-secondary">Get In Touch</a>
+        </div>
+        <div class="hero-stats">
+          <div class="stat-item">
+            <span class="stat-number" data-target="250">0</span>+
+            <span class="stat-label">Problems Solved</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number" data-target="3">0</span>+
+            <span class="stat-label">Projects Built</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number" data-target="3">0</span>+
+            <span class="stat-label">Certifications</span>
+          </div>
+        </div>
+      </div>
+      <div class="hero-image">
+        <div class="hero-image-frame">
+          <div class="hero-image-glow"></div>
+          <img src="assets/profile.jpg" alt="Gagan Chauhan" id="profilePhoto" />
+          <div class="hero-image-ring"></div>
+        </div>
+      </div>
+    </div>
+    <a href="#about" class="scroll-indicator" aria-label="Scroll down">
+      <div class="scroll-mouse">
+        <div class="scroll-wheel"></div>
+      </div>
+    </a>
+  </section>
+
+  <!-- About Section -->
+  <section class="section about" id="about">
+    <div class="container">
+      <h2 class="section-title reveal">
+        <span class="section-number">01.</span> About Me
+      </h2>
+      <div class="about-content">
+        <div class="about-statement reveal">
+          <p>I'm a <strong>Computer Science & Engineering</strong> student at <strong>Lovely Professional University</strong> who thrives at the intersection of <em>data science</em>, <em>machine learning</em>, and <em>full-stack development</em>. I believe in building solutions that aren't just technically sound — they're meaningful.</p>
+          <p>From crunching datasets to uncover hidden insights, to deploying ML models that predict real-world outcomes, I approach every challenge with curiosity and a problem-solving mindset. When I'm not coding, I'm sharpening my DSA skills on LeetCode and GFG, or exploring the latest in Generative AI.</p>
+        </div>
+        <div class="timeline reveal">
+          <div class="timeline-item" data-year="2023">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content glass-card">
+              <h3>The Beginning</h3>
+              <p>Started my Computer Science journey at LPU. Dove deep into programming fundamentals, DSA, and built a strong foundation in C, C++, Java, and Python.</p>
+            </div>
+          </div>
+          <div class="timeline-item" data-year="2024">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content glass-card">
+              <h3>Skill Expansion</h3>
+              <p>Mastered Data Structures & Algorithms. Earned certifications. Solved 100+ problems on GFG and 150+ on LeetCode. Started exploring Machine Learning and Data Science.</p>
+            </div>
+          </div>
+          <div class="timeline-item" data-year="2025">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content glass-card">
+              <h3>Building Real Projects</h3>
+              <p>Built ML-powered prediction systems, performed deep data analytics on real datasets, and developed end-to-end AI applications. Earned Generative AI certifications from Infosys and Udemy.</p>
+            </div>
+          </div>
+          <div class="timeline-item" data-year="2026">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content glass-card">
+              <h3>Going Further</h3>
+              <p>Developing enterprise-grade intelligent systems, integrating AI with DevOps pipelines, and preparing to make an impact in the tech industry.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section class="section skills" id="skills">
+    <div class="container">
+      <h2 class="section-title reveal">
+        <span class="section-number">02.</span> Skills & Expertise
+      </h2>
+      <div class="skills-grid">
+        <!-- Programming -->
+        <div class="skill-category glass-card reveal" data-tilt>
+          <div class="skill-category-header">
+            <div class="skill-icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+            </div>
+            <h3>Programming Languages</h3>
+          </div>
+          <div class="skill-bars">
+            <div class="skill-bar-item">
+              <div class="skill-bar-header"><span>Python</span><span class="skill-percent">90%</span></div>
+              <div class="skill-bar-track"><div class="skill-bar-fill" data-width="90" style="--bar-color: #3776AB"></div></div>
+              <p class="skill-detail">ML/AI, Data Science, Automation, Scripting</p>
+            </div>
+            <div class="skill-bar-item">
+              <div class="skill-bar-header"><span>Java</span><span class="skill-percent">85%</span></div>
+              <div class="skill-bar-track"><div class="skill-bar-fill" data-width="85" style="--bar-color: #ED8B00"></div></div>
+              <p class="skill-detail">Spring Boot, OOP, JDBC, Maven</p>
+            </div>
+            <div class="skill-bar-item">
+              <div class="skill-bar-header"><span>C / C++</span><span class="skill-percent">80%</span></div>
+              <div class="skill-bar-track"><div class="skill-bar-fill" data-width="80" style="--bar-color: #00599C"></div></div>
+              <p class="skill-detail">DSA, Competitive Programming</p>
+            </div>
+            <div class="skill-bar-item">
+              <div class="skill-bar-header"><span>JavaScript</span><span class="skill-percent">75%</span></div>
+              <div class="skill-bar-track"><div class="skill-bar-fill" data-width="75" style="--bar-color: #F7DF1E"></div></div>
+              <p class="skill-detail">Frontend, DOM, ES6+</p>
+            </div>
+            <div class="skill-bar-item">
+              <div class="skill-bar-header"><span>SQL</span><span class="skill-percent">80%</span></div>
+              <div class="skill-bar-track"><div class="skill-bar-fill" data-width="80" style="--bar-color: #4479A1"></div></div>
+              <p class="skill-detail">MySQL, Queries, Database Design</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Web & Frameworks -->
+        <div class="skill-category glass-card reveal" data-tilt>
+          <div class="skill-category-header">
+            <div class="skill-icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+            </div>
+            <h3>Web & Frameworks</h3>
+          </div>
+          <div class="skill-bars">
+            <div class="skill-bar-item">
+              <div class="skill-bar-header"><span>HTML / CSS</span><span class="skill-percent">85%</span></div>
+              <div class="skill-bar-track"><div class="skill-bar-fill" data-width="85" style="--bar-color: #E34F26"></div></div>
+              <p class="skill-detail">Semantic HTML, Responsive Design, Animations</p>
+            </div>
+            <div class="skill-bar-item">
+              <div class="skill-bar-header"><span>Spring Boot</span><span class="skill-percent">70%</span></div>
+              <div class="skill-bar-track"><div class="skill-bar-fill" data-width="70" style="--bar-color: #6DB33F"></div></div>
+              <p class="skill-detail">REST APIs, MVC, Microservices</p>
+            </div>
+            <div class="skill-bar-item">
+              <div class="skill-bar-header"><span>MySQL</span><span class="skill-percent">80%</span></div>
+              <div class="skill-bar-track"><div class="skill-bar-fill" data-width="80" style="--bar-color: #4479A1"></div></div>
+              <p class="skill-detail">Database Design, CRUD, Joins, Optimization</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Data Science -->
+        <div class="skill-category glass-card reveal" data-tilt>
+          <div class="skill-category-header">
+            <div class="skill-icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
+            </div>
+            <h3>Data Science & ML</h3>
+          </div>
+          <div class="skill-bars">
+            <div class="skill-bar-item">
+              <div class="skill-bar-header"><span>Pandas / NumPy</span><span class="skill-percent">88%</span></div>
+              <div class="skill-bar-track"><div class="skill-bar-fill" data-width="88" style="--bar-color: #150458"></div></div>
+              <p class="skill-detail">Data Wrangling, Analysis, Transformation</p>
+            </div>
+            <div class="skill-bar-item">
+              <div class="skill-bar-header"><span>Matplotlib / Seaborn</span><span class="skill-percent">85%</span></div>
+              <div class="skill-bar-track"><div class="skill-bar-fill" data-width="85" style="--bar-color: #11557C"></div></div>
+              <p class="skill-detail">Data Visualization, Charts, Statistical Plots</p>
+            </div>
+            <div class="skill-bar-item">
+              <div class="skill-bar-header"><span>Scikit-learn</span><span class="skill-percent">82%</span></div>
+              <div class="skill-bar-track"><div class="skill-bar-fill" data-width="82" style="--bar-color: #F89939"></div></div>
+              <p class="skill-detail">Classification, Regression, Model Evaluation</p>
+            </div>
+            <div class="skill-bar-item">
+              <div class="skill-bar-header"><span>Power BI</span><span class="skill-percent">75%</span></div>
+              <div class="skill-bar-track"><div class="skill-bar-fill" data-width="75" style="--bar-color: #F2C811"></div></div>
+              <p class="skill-detail">Dashboards, KPIs, Interactive Reports</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tools -->
+        <div class="skill-category glass-card reveal" data-tilt>
+          <div class="skill-category-header">
+            <div class="skill-icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+            </div>
+            <h3>Tools & Platforms</h3>
+          </div>
+          <div class="skill-bars">
+            <div class="skill-bar-item">
+              <div class="skill-bar-header"><span>Git / GitHub</span><span class="skill-percent">85%</span></div>
+              <div class="skill-bar-track"><div class="skill-bar-fill" data-width="85" style="--bar-color: #F05032"></div></div>
+              <p class="skill-detail">Version Control, Collaboration, CI/CD</p>
+            </div>
+            <div class="skill-bar-item">
+              <div class="skill-bar-header"><span>Docker</span><span class="skill-percent">65%</span></div>
+              <div class="skill-bar-track"><div class="skill-bar-fill" data-width="65" style="--bar-color: #2496ED"></div></div>
+              <p class="skill-detail">Containerization, DevOps Workflows</p>
+            </div>
+            <div class="skill-bar-item">
+              <div class="skill-bar-header"><span>VS Code / IntelliJ</span><span class="skill-percent">90%</span></div>
+              <div class="skill-bar-track"><div class="skill-bar-fill" data-width="90" style="--bar-color: #007ACC"></div></div>
+              <p class="skill-detail">IDE Proficiency, Debugging, Extensions</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section class="section projects" id="projects">
+    <div class="container">
+      <h2 class="section-title reveal">
+        <span class="section-number">03.</span> Featured Projects
+      </h2>
+      <div class="project-filters reveal">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="data-science">Data Science</button>
+        <button class="filter-btn" data-filter="ml">Machine Learning</button>
+        <button class="filter-btn" data-filter="analytics">Analytics</button>
+      </div>
+      <div class="projects-grid">
+
+        <!-- Project 1: Black Friday EDA -->
+        <div class="project-card glass-card reveal" data-category="data-science analytics" data-tilt id="project1">
+          <div class="project-card-header">
+            <div class="project-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/GaganChauhan905" target="_blank" aria-label="GitHub" class="project-link-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+              </a>
+            </div>
+          </div>
+          <h3 class="project-title">Black Friday EDA</h3>
+          <p class="project-subtitle">Retail Data Analytics</p>
+          <p class="project-desc">End-to-end exploratory data analysis on Kaggle's Black Friday retail dataset, uncovering customer demographics, purchasing trends, and product-category performance insights for marketing strategy.</p>
+          <div class="project-tech">
+            <span>Python</span><span>Pandas</span><span>NumPy</span><span>Matplotlib</span><span>Seaborn</span>
+          </div>
+          <button class="project-details-btn" data-project="blackfriday">View Case Study →</button>
+        </div>
+
+        <!-- Project 2: Multiple Disease Prediction -->
+        <div class="project-card glass-card reveal" data-category="ml data-science" data-tilt id="project2">
+          <div class="project-card-header">
+            <div class="project-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/GaganChauhan905" target="_blank" aria-label="GitHub" class="project-link-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+              </a>
+            </div>
+          </div>
+          <h3 class="project-title">Multiple Disease Prediction</h3>
+          <p class="project-subtitle">Healthcare AI System</p>
+          <p class="project-desc">Multi-disease prediction system using trained ML models for several health conditions, with an interactive Streamlit web app enabling real-time diagnosis from clinical parameters.</p>
+          <div class="project-tech">
+            <span>Python</span><span>Scikit-learn</span><span>Streamlit</span><span>Pandas</span>
+          </div>
+          <button class="project-details-btn" data-project="disease">View Case Study →</button>
+        </div>
+
+        <!-- Project 3: Loan Eligibility Model -->
+        <div class="project-card glass-card reveal" data-category="ml analytics" data-tilt id="project3">
+          <div class="project-card-header">
+            <div class="project-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/GaganChauhan905" target="_blank" aria-label="GitHub" class="project-link-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+              </a>
+            </div>
+          </div>
+          <h3 class="project-title">Loan Eligibility Model</h3>
+          <p class="project-subtitle">FinTech ML + BI Dashboard</p>
+          <p class="project-desc">Loan approval prediction using Random Forest classifier with engineered financial features, paired with an interactive Power BI dashboard for stakeholder insights and KPI tracking.</p>
+          <div class="project-tech">
+            <span>Python</span><span>Scikit-learn</span><span>Power BI</span><span>Pandas</span><span>NumPy</span>
+          </div>
+          <button class="project-details-btn" data-project="loan">View Case Study →</button>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Project Modal -->
+  <div class="modal-overlay" id="projectModal">
+    <div class="modal-content glass-card">
+      <button class="modal-close" id="modalClose">&times;</button>
+      <div class="modal-body" id="modalBody"></div>
+    </div>
+  </div>
+
+  <!-- Certifications & Achievements -->
+  <section class="section certifications" id="certifications">
+    <div class="container">
+      <h2 class="section-title reveal">
+        <span class="section-number">04.</span> Certifications & Achievements
+      </h2>
+      <div class="cert-grid">
+        <div class="cert-card glass-card reveal" data-tilt>
+          <div class="cert-icon">🏆</div>
+          <h3>Data Structures & Algorithms</h3>
+          <p class="cert-issuer">iamneo Platform</p>
+          <p class="cert-date">August 2024</p>
+        </div>
+        <div class="cert-card glass-card reveal" data-tilt>
+          <div class="cert-icon">🤖</div>
+          <h3>ChatGPT-4 Prompt Engineering</h3>
+          <p class="cert-issuer">Infosys</p>
+          <p class="cert-date">August 2025</p>
+        </div>
+        <div class="cert-card glass-card reveal" data-tilt>
+          <div class="cert-icon">🧠</div>
+          <h3>Master Generative AI & Tools</h3>
+          <p class="cert-issuer">Udemy</p>
+          <p class="cert-date">August 2025</p>
+        </div>
+      </div>
+      <div class="achievements-row reveal">
+        <div class="achievement-item glass-card">
+          <div class="achievement-number">100+</div>
+          <p>Problems solved on <strong>GeeksforGeeks</strong></p>
+        </div>
+        <div class="achievement-item glass-card">
+          <div class="achievement-number">150+</div>
+          <p>Challenges completed on <strong>LeetCode</strong></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="section contact" id="contact">
+    <div class="container">
+      <h2 class="section-title reveal">
+        <span class="section-number">05.</span> Get In Touch
+      </h2>
+      <p class="contact-subtitle reveal">Let's build something impactful together 🚀</p>
+      <div class="contact-wrapper">
+        <form class="contact-form glass-card reveal" id="contactForm">
+          <div class="form-group">
+            <label for="contactName">Name</label>
+            <input type="text" id="contactName" name="name" placeholder="Your name" required />
+            <span class="form-error" id="nameError"></span>
+          </div>
+          <div class="form-group">
+            <label for="contactEmail">Email</label>
+            <input type="email" id="contactEmail" name="email" placeholder="your@email.com" required />
+            <span class="form-error" id="emailError"></span>
+          </div>
+          <div class="form-group">
+            <label for="contactMessage">Message</label>
+            <textarea id="contactMessage" name="message" placeholder="Tell me about your idea..." rows="5" required></textarea>
+            <span class="form-error" id="messageError"></span>
+          </div>
+          <button type="submit" class="btn-primary btn-submit" id="submitBtn">
+            Send Message
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+          </button>
+        </form>
+        <div class="contact-info reveal">
+          <div class="contact-card glass-card">
+            <h3>Let's Connect</h3>
+            <div class="contact-links">
+              <a href="https://github.com/GaganChauhan905" target="_blank" class="contact-link" id="githubLink">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+                <div>
+                  <span class="link-label">GitHub</span>
+                  <span class="link-value">GaganChauhan905</span>
+                </div>
+              </a>
+              <a href="https://www.linkedin.com/in/gaganChauhan/" target="_blank" class="contact-link" id="linkedinLink">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+                <div>
+                  <span class="link-label">LinkedIn</span>
+                  <span class="link-value">gaganChauhan</span>
+                </div>
+              </a>
+              <a href="mailto:chauhangagan2675@gmail.com" class="contact-link" id="emailLink">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                <div>
+                  <span class="link-label">Email</span>
+                  <span class="link-value">chauhangagan2675@gmail.com</span>
+                </div>
+              </a>
+              <a href="tel:+919053800378" class="contact-link" id="phoneLink">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                <div>
+                  <span class="link-label">Phone</span>
+                  <span class="link-value">+91-9053800378</span>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p>Designed & Built by <strong>Gagan Chauhan</strong> &copy; 2026</p>
+      <p class="footer-tagline">Crafted with ☕ and curiosity.</p>
+    </div>
+  </footer>
+
+  <!-- Chatbot -->
+  <div class="chatbot-wrapper" id="chatbotWrapper">
+    <button class="chatbot-toggle" id="chatbotToggle" aria-label="Open chatbot">
+      <svg class="chat-open-icon" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+      <svg class="chat-close-icon" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+    <div class="chatbot-panel glass-card" id="chatbotPanel">
+      <div class="chatbot-header">
+        <div class="chatbot-avatar">🤖</div>
+        <div>
+          <h4>Ask Me Anything</h4>
+          <span class="chatbot-status">Online</span>
+        </div>
+      </div>
+      <div class="chatbot-messages" id="chatbotMessages">
+        <div class="chat-message bot">
+          <p>Hey! 👋 I'm Gagan's portfolio assistant. Ask me about his skills, projects, education, or experience!</p>
+        </div>
+      </div>
+      <div class="chatbot-suggestions" id="chatbotSuggestions">
+        <button class="suggestion-btn" data-question="What are your skills?">Skills</button>
+        <button class="suggestion-btn" data-question="Tell me about your projects">Projects</button>
+        <button class="suggestion-btn" data-question="What is your education?">Education</button>
+        <button class="suggestion-btn" data-question="How can I contact you?">Contact</button>
+      </div>
+      <div class="chatbot-input-wrapper">
+        <input type="text" class="chatbot-input" id="chatbotInput" placeholder="Type a question..." />
+        <button class="chatbot-send" id="chatbotSend" aria-label="Send message">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
