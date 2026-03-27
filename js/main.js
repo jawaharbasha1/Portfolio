@@ -1,5 +1,5 @@
 /* ============================================
-   GAGAN CHAUHAN — PORTFOLIO JAVASCRIPT
+   MD FIRDOUS ALAM — PORTFOLIO JAVASCRIPT
    Typing, chatbot, filters, animations, theme
    ============================================ */
 
@@ -359,15 +359,36 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     if (valid) {
-      submitBtn.innerHTML = '✓ Message Sent!';
-      submitBtn.classList.add('success');
+      submitBtn.innerHTML = 'Sending...';
       submitBtn.disabled = true;
-      setTimeout(() => {
-        submitBtn.innerHTML = `Send Message <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>`;
-        submitBtn.classList.remove('success');
+
+      fetch("https://formsubmit.co/ajax/fa6448718@gmail.com", {
+        method: "POST",
+        headers: {
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
+        },
+        body: JSON.stringify({
+            name: name.value,
+            email: email.value,
+            message: message.value
+        })
+      })
+      .then(response => response.json())
+      .then(data => {
+        submitBtn.innerHTML = '✓ Message Sent!';
+        submitBtn.classList.add('success');
+        setTimeout(() => {
+          submitBtn.innerHTML = `Send Message <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>`;
+          submitBtn.classList.remove('success');
+          submitBtn.disabled = false;
+          contactForm.reset();
+        }, 3000);
+      })
+      .catch(error => {
+        submitBtn.innerHTML = 'Error! Try Again';
         submitBtn.disabled = false;
-        contactForm.reset();
-      }, 3000);
+      });
     }
   });
 
@@ -397,11 +418,11 @@ document.addEventListener('DOMContentLoaded', () => {
     const q = question.toLowerCase();
 
     if (q.includes('skill') || q.includes('tech') || q.includes('know')) {
-      return "Gagan's key skills include:<br>• <strong>Languages:</strong> Python, Java, C++, C, JavaScript, SQL<br>• <strong>Data Science:</strong> Pandas, NumPy, Matplotlib, Seaborn, Scikit-learn, Power BI<br>• <strong>Web:</strong> HTML, CSS, Spring Boot<br>• <strong>Tools:</strong> Git, Docker, VS Code, IntelliJ IDEA<br>• <strong>Core:</strong> DSA, JDBC, AI Integration, DevOps";
+      return "Firdous's key skills include:<br>• <strong>Languages:</strong> Python, Java, C++, C, JavaScript, SQL<br>• <strong>Data Science:</strong> Pandas, NumPy, Matplotlib, Seaborn, Scikit-learn, Power BI<br>• <strong>Web:</strong> HTML, CSS, Spring Boot<br>• <strong>Tools:</strong> Git, Docker, VS Code, IntelliJ IDEA<br>• <strong>Core:</strong> DSA, JDBC, AI Integration, DevOps";
     }
 
     if (q.includes('project') || q.includes('work') || q.includes('built')) {
-      return "Gagan has built 3 notable projects:<br>1. 📊 <strong>Black Friday EDA</strong> — Retail data analytics with Python<br>2. 🏥 <strong>Multiple Disease Prediction</strong> — ML system with Streamlit UI<br>3. 💰 <strong>Loan Eligibility Model</strong> — Random Forest + Power BI dashboard<br><br>Click on any project card above to see the full case study!";
+      return "Firdous has built 3 notable projects:<br>1. 📊 <strong>Black Friday EDA</strong> — Retail data analytics with Python<br>2. 🏥 <strong>Multiple Disease Prediction</strong> — ML system with Streamlit UI<br>3. 💰 <strong>Loan Eligibility Model</strong> — Random Forest + Power BI dashboard<br><br>Click on any project card above to see the full case study!";
     }
 
     if (q.includes('education') || q.includes('study') || q.includes('college') || q.includes('university') || q.includes('degree')) {
@@ -409,11 +430,11 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     if (q.includes('contact') || q.includes('reach') || q.includes('email') || q.includes('connect') || q.includes('hire')) {
-      return "You can reach Gagan via:<br>📧 <strong>Email:</strong> chauhangagan2675@gmail.com<br>🔗 <strong>LinkedIn:</strong> linkedin.com/in/gaganChauhan<br>🐙 <strong>GitHub:</strong> github.com/GaganChauhan905<br>📱 <strong>Phone:</strong> +91-9053800378";
+      return "You can reach Firdous via:<br>📧 <strong>Email:</strong> fa6448718@gmail.com<br>🔗 <strong>LinkedIn:</strong> linkedin.com/in/md-firdous-alam-22b2ba298<br>🐙 <strong>GitHub:</strong> github.com/MdFirdous0123<br>📱 <strong>Phone:</strong> +91-9366142005";
     }
 
     if (q.includes('certification') || q.includes('certificate') || q.includes('cert')) {
-      return "Gagan holds 3 certifications:<br>1. 🏆 DSA — iamneo Platform (Aug 2024)<br>2. 🤖 ChatGPT-4 Prompt Engineering — Infosys (Aug 2025)<br>3. 🧠 Master Generative AI & Tools — Udemy (Aug 2025)";
+      return "Firdous holds 3 certifications:<br>1. 🏆 DSA — iamneo Platform (Aug 2024)<br>2. 🤖 ChatGPT-4 Prompt Engineering — Infosys (Aug 2025)<br>3. 🧠 Master Generative AI & Tools — Udemy (Aug 2025)";
     }
 
     if (q.includes('achievement') || q.includes('leetcode') || q.includes('gfg') || q.includes('geeksforgeeks') || q.includes('competitive')) {
@@ -421,18 +442,18 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     if (q.includes('hello') || q.includes('hi') || q.includes('hey') || q.includes('howdy')) {
-      return "Hey there! 👋 Welcome to Gagan's portfolio. Feel free to ask me about his skills, projects, education, or how to get in touch!";
+      return "Hey there! 👋 Welcome to Firdous's portfolio. Feel free to ask me about his skills, projects, education, or how to get in touch!";
     }
 
     if (q.includes('experience') || q.includes('intern')) {
-      return "Gagan is currently a B.Tech student focused on building real-world projects. He's developed ML prediction systems, data analytics pipelines, and full-stack applications. He's actively looking for opportunities to contribute to impactful projects!";
+      return "Firdous is currently a B.Tech student focused on building real-world projects. He's developed ML prediction systems, data analytics pipelines, and full-stack applications. He's actively looking for opportunities to contribute to impactful projects!";
     }
 
     if (q.includes('resume') || q.includes('cv')) {
-      return "You can download Gagan's resume using the 'Resume' button in the navigation bar at the top of the page! 📄";
+      return "You can download Firdous's resume using the 'Resume' button in the navigation bar at the top of the page! 📄";
     }
 
-    return "That's a great question! I'm Gagan's portfolio assistant and I can help with questions about his:<br>• 💻 Skills & technologies<br>• 🚀 Projects<br>• 🎓 Education<br>• 📜 Certifications<br>• 📧 Contact info<br><br>Try asking about any of these!";
+    return "That's a great question! I'm Firdous's portfolio assistant and I can help with questions about his:<br>• 💻 Skills & technologies<br>• 🚀 Projects<br>• 🎓 Education<br>• 📜 Certifications<br>• 📧 Contact info<br><br>Try asking about any of these!";
   }
 
   function handleChat() {
